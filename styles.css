@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #545151; /* Preto para o fundo da página */
+    color: #fff; /* Branco para o texto geral */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,16 +10,17 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #333; /* Cinza escuro para o fundo do container */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Sombra vermelha para destacar o container */
     width: 300px;
     text-align: center;
 }
 
 h1 {
     margin-bottom: 20px;
+    color: #b6b6b6; /* Cinza claro para o título */
 }
 
 .input-group {
@@ -29,16 +31,35 @@ h1 {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #ff0000; /* Vermelho para o rótulo dos campos */
 }
 
 .input-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff0000; /* Vermelho para a borda dos campos */
     border-radius: 4px;
+    background-color: #000; /* Preto para o fundo dos campos de entrada */
+    color: #fff; /* Branco para o texto dos campos de entrada */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura total */
 }
 
 #resultado {
     margin-top: 20px;
     font-size: 1.2em;
+    color: #ff0000; /* Vermelho para o resultado que aparecer */
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%; /* Ajusta a largura do container em telas menores */
+    }
+    
+    .input-group input {
+        font-size: 0.9em; /* Reduz o tamanho da fonte para campos de entrada em dispositivos menores */
+    }
+    
+    h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título em dispositivos menores */
+    }
 }
